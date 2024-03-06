@@ -1,9 +1,7 @@
-import Button from "./components/button";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
-import ServiceCard from "./components/service-card";
-import About from "./components/about";
 import { FaChevronRight } from "react-icons/fa";
+import { About, Button, Comments, Faq, Heading, ServiceCard } from "./components";
 
 export default function Home() {
   const obj = [
@@ -94,9 +92,9 @@ export default function Home() {
         ))}
       </div>
       <div className="px-[7%] my-12">
-        <h2 className="text-3xl font-bold">
+        <Heading >
           Toshkent da toifalar bo&apos;yicha xizmatlar
-        </h2>
+        </Heading>
         <div className="grid md:grid-cols-3 gap-12 md:h-80 mt-12 ">
           {datas.map((data) => (
             <ServiceCard key={data.id} data={data} />
@@ -110,6 +108,8 @@ export default function Home() {
         </div>
       </div>
       <About />
+      <Comments />
+      <Faq />
     </>
   );
 }
