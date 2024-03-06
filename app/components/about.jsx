@@ -49,11 +49,11 @@ const About = () => {
             {host} saytida ishlash
           </h2>
           <p className="mb-4">
-            {host} saytida ro'yxatdan o'ting va har kuni minglab buyurtmalar va
-            yuzlab bo'sh ish o'rinlarini oling.
+            {host} saytida ro&apos;yxatdan o&apos;ting va har kuni minglab buyurtmalar va
+            yuzlab bo&apos;sh ish o&apos;rinlarini oling.
           </p>
           <div className="flex justify-center">
-            <Button>Batafsil Ma'lumot</Button>
+            <Button>Batafsil Ma&apos;lumot</Button>
           </div>
         </div>
       </div>

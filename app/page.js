@@ -95,7 +95,7 @@ export default function Home() {
       </div>
       <div className="px-[7%] my-12">
         <h2 className="text-3xl font-bold">
-          Toshkent da toifalar bo'yicha xizmatlar
+          Toshkent da toifalar bo&apos;yicha xizmatlar
         </h2>
         <div className="grid md:grid-cols-3 gap-12 md:h-80 mt-12 ">
           {datas.map((data) => (
@@ -103,7 +103,7 @@ export default function Home() {
           ))}
           <div className="bg-[#D6EAFF] rounded-xl p-6 flex justify-around text-blue font-bold flex-col">
             <h2 className="text-3xl">
-              Qolgan Toifalar yaqin orada qo'shiladi...
+              Qolgan Toifalar yaqin orada qo&apos;shiladi...
             </h2>
             <Button>Buyurtma yarating</Button>
           </div>
