@@ -48,7 +48,7 @@ const Faq = () => {
             Bu eyesberg.uz xizmatidagi mutaxassisning martaba bosqichidir. Yangi
             darajalarga erishilganda, mutaxassis martaba zinapoyasiga
             ko&apos;tariladi. Har bir daraja mutaxassisning ish sifati va
-            professionalligini namoyish etadi. Daraja qanchalik baland bo'lsa,
+            professionalligini namoyish etadi. Daraja qanchalik baland bo&apos;lsa,
             yangi buyurtmalar olish ehtimoli shunchalik yuqori bo&apos;ladi
           </p>
         </div>

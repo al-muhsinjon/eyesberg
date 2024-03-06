@@ -36,7 +36,7 @@ const Comments = () => {
           </p>
           <p className="mt-6">
             <span className="block">#Vaqtda </span>
-            <span className="block">#Sozda ko'rinish </span>
+            <span className="block">#Sozda ko&apos;rinish </span>
             <span className="block">#Odobli muloqot </span>
             <span className="block">#Sifatli ish </span>
             <span className="block">#Yaxshi narx</span>
@@ -66,7 +66,7 @@ const Comments = () => {
           </p>
           <p className="mt-6">
             <span className="block">#Vaqtda </span>
-            <span className="block">#Sozda ko'rinish </span>
+            <span className="block">#Sozda ko&apos;rinish </span>
             <span className="block">#Odobli muloqot </span>
             <span className="block">#Sifatli ish </span>
             <span className="block">#Yaxshi narx</span>
@@ -94,7 +94,7 @@ const Comments = () => {
             Ofitsiant lar juda zor xizmat korsatishti yana olmoqchiman.
           </p>
           <p className="mt-6">
-            <span className="block">#Toz ko'rinish</span>
+            <span className="block">#Toz ko&apos;rinish</span>
             <span className="block">#Sifatli ish</span>
             <span className="block">#Yaxshi narx</span>
             <span className="block">#Muloyim muloqot</span>
