@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { IoLocation } from "react-icons/io5";
 
 import Languages from "./languages";
-import Button from "./Button";
+import Button from "./button";
 // import { logoLaptop, logo } from "../images";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const Navbar = () => {
           <Image
             src={screen ? "/images/site-logo.png" : "/images/logo.png"}
             fill
-            className="  "
+            className=" "
             alt="logo"
           />
         </Link>
