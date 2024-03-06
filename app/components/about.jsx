@@ -1,9 +1,13 @@
-
+"use client";
 import Button from "./button";
 import Active from "./active";
+import { useEffect, useState } from "react";
 
 const About = () => {
-  const host = "window.location.host";
+  const [host, setHost] = useState();
+  useEffect(() => {
+    setHost(window.location.host);
+  }, []);
 
   const data = [
     {
@@ -49,8 +53,8 @@ const About = () => {
             {host} saytida ishlash
           </h2>
           <p className="mb-4">
-            {host} saytida ro&apos;yxatdan o&apos;ting va har kuni minglab buyurtmalar va
-            yuzlab bo&apos;sh ish o&apos;rinlarini oling.
+            {host} saytida ro&apos;yxatdan o&apos;ting va har kuni minglab
+            buyurtmalar va yuzlab bo&apos;sh ish o&apos;rinlarini oling.
           </p>
           <div className="flex justify-center">
             <Button>Batafsil Ma&apos;lumot</Button>
