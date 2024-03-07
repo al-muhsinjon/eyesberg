@@ -11,9 +11,9 @@ const ServiceCard = ({ data }) => {
     >
       <div className="flex md:flex-row relative flex-col justify-between md:gap-12 items-center">
         <Image src={src} alt="iw" width={100} height={100} />
-        <h2 className="text-3xl font-bold ">{text}</h2>
+        <h2 className="text-3xl xl:text-2xl font-bold ">{text}</h2>
       </div>
-      <p className="text-gray my-4 md:w-1/2">{desc}</p>
+      <p className="text-gray my-4 xl:w-auto md:w-1/2">{desc}</p>
     </Link>
   );
 };
