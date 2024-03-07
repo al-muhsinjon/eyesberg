@@ -48,7 +48,7 @@ export default function Home() {
   ];
   return (
     <>
-      <main className="px-[7%] h-screen bg-hero  bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
+      <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="md:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl w-[70%] text-3xl font-bold">
             <span className="text-blue">Toshkent</span>dagi eng yaxshi
