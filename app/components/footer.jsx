@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="md:flex hidden md:w-1/2 justify-between font-bold leading-loose">
         <ul>
           <li>
-            <Link href="/">Bo'sh ish o'rinlari</Link>
+            <Link href="/">Bo&apos;sh ish o&apos;rinlari</Link>
           </li>
           <li>
             <Link href="/">Blog</Link>
