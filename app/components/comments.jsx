@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Heading  from "./heading-section";
+import Heading from "./heading-section";
 
 const Comments = () => {
   return (
     <div className="px-[7%] p-6">
-      <Heading >
+      <Heading>
         eyesberg.uz xizmati haqida so&apos;nggi mijozlar sharhlari
       </Heading>
-      <div className="grid md:grid-cols-4 gap-6 mt-6 ">
+      <div className="grid 2xl:grid-cols-4 md:grid-cols-2 gap-6 mt-6 ">
         <div className="text-center max-h-[370px] bg-white  px-20 rounded-xl py-16 flex flex-col gap-6 ">
           <h2 className="font-bold text-4xl">3758</h2>
           <b className="text-2xl">yaxshi sharhlar</b>
@@ -46,7 +46,7 @@ const Comments = () => {
             href={"/"}
           >{`"Bayram va tadbirlar"`}</Link>
         </div>
-{/* -------------------------! Delete !---------------------------------- */}
+        {/* -------------------------! Delete !---------------------------------- */}
         <div className="bg-white p-4 px-8 flex flex-col min-h-[400px] justify-around rounded-xl">
           <div className="flex justify-between">
             <b className="flex gap-2">
@@ -104,8 +104,7 @@ const Comments = () => {
             href={"/"}
           >{`"Bayram va tadbirlar"`}</Link>
         </div>
-{/* ---------------------------! Delete !-------------------------------- */}
-
+        {/* ---------------------------! Delete !-------------------------------- */}
       </div>
     </div>
   );

@@ -49,12 +49,12 @@ export default function Home() {
   return (
     <>
       <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
-        <div className="md:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
+        <div className="2xl:w-1/2 xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl w-[70%] text-3xl font-bold">
             <span className="text-blue">Toshkent</span>dagi eng yaxshi
             mutaxassislar
           </h1>
-          <div className="relative h-auto md:h-14 md:flex mt-6 md:bg-white rounded-xl justify-between w-full">
+          <div className="relative h-auto md:h-14 md:flex mt-6 md:bg-white rounded-xl justify-between w-full p-1">
             <IoSearchOutline className="absolute left-2 md:top-[30%] top-4  text-2xl" />
             <input
               type="text"
@@ -73,7 +73,11 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="px-[7%] my-12  grid md:grid-cols-4 gap-6 ">
+      <div className="w-24 h-24 sm:bg-red-500 md:bg-yellow-300 lg:bg-green-400 xl:bg-indigo-100 bg-violet-900 2xl:bg-orange-400">
+        ubeube
+      </div>
+
+      <div className="px-[7%] my-12  grid 2xl:grid-cols-4 md:grid-cols-2 gap-6 ">
         <div className="px-4 py-6 ">
           <h2 className="font-bold text-3xl">
             Toshkentda eyesberg.uz da qanday mutaxassis topsa boladi?
@@ -100,7 +104,7 @@ export default function Home() {
       </div>
       <div className="px-[7%] my-12">
         <Heading>Toshkent da toifalar bo&apos;yicha xizmatlar</Heading>
-        <div className="grid md:grid-cols-3 md:gap-12 xl:gap-6 md:h-80 mt-12 ">
+        <div className="grid 2xl:grid-cols-3 md:grid-cols-2 2xl:gap-12 gap-6 2xl:h-80 mt-12 ">
           {datas.map((data) => (
             <ServiceCard key={data.id} data={data} />
           ))}

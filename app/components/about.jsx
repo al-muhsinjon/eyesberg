@@ -31,8 +31,8 @@ const About = () => {
   ];
 
   return (
-    <div className="md:flex my-12 py-7 justify-between px-[7%]">
-      <div className="md:w-[53%]  felx-1 grid md:grid-cols-2 gap-6 gap-y-12">
+    <div className="2xl:flex-row md:flex-col-reverse xl:flex-row flex-col md:gap-6 flex my-12 py-7 justify-between px-[7%]">
+      <div className="2xl:w-[53%] xl:w-[55%]  grid md:grid-cols-2 gap-6 gap-y-12">
         {data.map((item) => (
           <div
             className="text-center rounded-xl px-8 py-6 min-h-[350px] flex flex-col justify-around bg-white"
@@ -46,10 +46,10 @@ const About = () => {
           </div>
         ))}
       </div>
-      <div className="md:w-[45%] flex  justify-center items-end pb-12 rounded-xl md:px-16 px-6 md:h-[1003px] h-[80vh] md:mt-0 mt-7 bg-left bg-special">
+      <div className="2xl:w-[45%] xl:w-[45%] flex  justify-center items-end pb-12 rounded-xl md:px-16 px-6 2xl:h-[1003px] xl:h-[1000px] h-[80vh] md:h-[50vh] md:mt-0 mt-7 2xl:bg-left md:bg-top  bg-special">
         <div className="text-white md:w-4/5">
           <Active>Mutaxassislar uchun</Active>
-          <h2 className="text-3xl font-bold my-4 md:w-[60%]">
+          <h2 className="text-3xl font-bold my-4 md:w-[45%]">
             {host} saytida ishlash
           </h2>
           <p className="mb-4">

@@ -6,10 +6,10 @@ body {
 }
 .bg-special {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.418)),
-    url("../public/images/specialist.png") no-repeat center/cover;
+    url("../public/images/specialist.png") no-repeat;
+  background-size: cover;
 }
 
 /* .bg-hero {
   background: url("/images/hero.png") right center no-repeat;
 } */
-

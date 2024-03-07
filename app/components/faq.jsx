@@ -9,7 +9,7 @@ const Faq = () => {
         Toshkentdagi eyesberg.uz xizmati haqidagi savollarga javoblar
       </Heading>
       <div className="grid md:grid-cols-2 my-6 gap-6">
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Nega eyesberg.uz mutaxassislari haqida sharh qoldirish kerak?
           </h2>
@@ -24,7 +24,7 @@ const Faq = () => {
           </p>
         </div>
         {/* -------------------------------! DELETE !----------------------------------- */}
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Mutaxassislik darajasi qanday?
           </h2>
@@ -39,7 +39,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Buyurtmaga imkon qadar ko&apos;proq mutaxassislar javob berishini
             ta&apos;minlash uchun nima qilish kerak?
@@ -53,7 +53,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Buyurtmaga imkon qadar ko&apos;proq mutaxassislar javob berishini
             ta&apos;minlash uchun nima qilish kerak?
@@ -65,7 +65,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Yaxshi mutaxassisni qanday tanlash mumkin?
           </h2>
@@ -78,7 +78,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Xizmatga qanday buyurtma berish mumkin?
           </h2>
@@ -92,7 +92,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Mutaxassislar buyurtmalarga qanchalik tez javob berishadi?
           </h2>
@@ -102,7 +102,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Xuddi shu raqamdan foydalangan holda mijoz va mutaxassis sifatida
             ro&apos;yxatdan o&apos;tishim mumkinmi?
@@ -113,7 +113,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             Ish uchun kafolat nima?
           </h2>
@@ -130,7 +130,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 md:max-h-[350px] bg-white rounded-xl">
+        <div className="md:p-12 p-6 2xl:max-h-[350px]  bg-white rounded-xl">
           <h2 className="font-bold md:text-2xl text-xl">
             eyesberg.uz pullikmi?
           </h2>
@@ -139,7 +139,7 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="md:p-12 p-6 flex bg-blue bg-opacity-30 justify-center items-center md:max-h-[350px]  rounded-xl">
+        <div className="md:p-12 p-6 flex bg-blue bg-opacity-30 justify-center items-center 2xl:max-h-[350px]   rounded-xl">
           <Link className="font-bold text-blue md:text-2xl text-xl" href="/">
             Barcha savollarga javoblar
           </Link>
