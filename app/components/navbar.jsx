@@ -21,12 +21,11 @@ const Navbar = () => {
     <header className="flex  justify-between px-[7%] items-center h-20 text-xl font-bold">
       <div className="flex  gap-8">
         <Link className="relative md:w-[197px] h-[42px] w-10" href="/">
-          <Image
-            src={screen ? "/images/site-logo.png" : "/images/logo.png"}
-            fill
-            className=" "
-            alt="logo"
-          />
+          {screen ? (
+            <Image src="/images/logo.svg" fill className=" " alt="logo" />
+          ) : (
+            <Image src="/images/mini-logo.svg" fill  alt="logo" />
+          )}
         </Link>
         <b className="text-blue  flex items-center gap-1">
           <IoLocation className="text-2xl" />

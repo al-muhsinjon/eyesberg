@@ -8,3 +8,8 @@ body {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.418)),
     url("../public/images/specialist.png") no-repeat center/cover;
 }
+
+/* .bg-hero {
+  background: url("/images/hero.png") right center no-repeat;
+} */
+

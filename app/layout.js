@@ -6,6 +6,9 @@ import Footer from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  icons: {
+    icon: "favicon.ico",
+  },
   title: "Eyesberg",
   description: "Finding the best jobs and workers",
 };
