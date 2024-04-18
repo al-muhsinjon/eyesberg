@@ -1,14 +1,7 @@
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
-import {
-  About,
-  Button,
-  Comments,
-  Faq,
-  Heading,
-  ServiceCard,
-} from "./components";
+import { About, Button, Comments, Faq, Heading, ServiceCard } from "@/components";
 
 export default function Home() {
   const obj = [
@@ -34,13 +27,13 @@ export default function Home() {
 
   const datas = [
     {
-      id: "iqwidjeuf",
+      id: "tozalash",
       src: "/images/plisoss.svg",
       text: "Tozalash va sanitariya",
       desc: "Balandlikda ishlash, Hududni tozalash",
     },
     {
-      id: "djwudhwud",
+      id: "ofitsiant",
       src: "/images/icon1.svg",
       text: "Bayramlar va tadbirlar",
       desc: "Cafe & Restaurant uchun ofitsiantlar ",
@@ -73,10 +66,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <div className="w-24 h-24 sm:bg-red-500 md:bg-yellow-300 lg:bg-green-400 xl:bg-indigo-100 bg-violet-900 2xl:bg-orange-400">
-        ubeube
-      </div>
-
       <div className="px-[7%] my-12  grid 2xl:grid-cols-4 md:grid-cols-2 gap-6 ">
         <div className="px-4 py-6 ">
           <h2 className="font-bold text-3xl">
