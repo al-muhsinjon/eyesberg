@@ -2,6 +2,7 @@ import React from "react";
 import { Button, InfoCard } from "@/components";
 import Image from "next/image";
 import { datas } from "@/constants";
+import FilterButton from "@/components/filter-button";
 
 export const metadata = {
   title: "Farrosh",
@@ -22,9 +23,12 @@ const Tozalik = () => {
         </div>
       </main>
       <div className="px-[7%]">
-        <h2 className="text-3xl font-bold">
-          Professional tozalash - mutaxassislar Toshkent
-        </h2>
+        <div className="flex justify-between relative">
+          <h2 className="text-3xl font-bold">
+            Professional tozalash - mutaxassislar Toshkent
+          </h2>
+          <FilterButton />
+        </div>
         <div className="grid grid-cols-3 py-6  gap-6">
           {datas.map((item) => (
             <InfoCard key={item.id} data={item} />
@@ -35,13 +39,13 @@ const Tozalik = () => {
             <h2 className="text-xl font-bold">Ko&apos;proq ko&apos;rish</h2>
           </div>
         )}
-        <div className="grid grid-cols-3 my-4 gap-8">
+        <div className="grid relative -z-10 grid-cols-3 my-4 gap-8">
           <div className="flex justify-center p-6 items-center">
             <h2 className="font-bold text-3xl">
               Tozalash vaqtidagi fotosuratlar
             </h2>
           </div>
-          <div className="relative rounded-xl overflow-hidden h-96">
+          <div className="relative z-10 rounded-xl overflow-hidden h-96">
             <Image
               className="object-fill"
               src="/images/tozalik-1.png"
@@ -52,13 +56,13 @@ const Tozalik = () => {
           <div className="relative rounded-xl h-96">
             <Image src="/images/tozalik-2.png" alt="tozalikda" fill />
           </div>
-          <div className="relative rounded-xl h-96">
+          <div className="relative z-10 rounded-xl h-96">
             <Image src="/images/tozalik-3.png" alt="tozalikda" fill />
           </div>
-          <div className="relative rounded-xl h-96">
+          <div className="relative z-10 rounded-xl h-96">
             <Image src="/images/tozalik-4.png" alt="tozalikda" fill />
           </div>
-          <div className="relative rounded-xl h-96">
+          <div className="relative z-10 rounded-xl h-96">
             <Image src="/images/tozalik-5.png" alt="tozalikda" fill />
           </div>
 

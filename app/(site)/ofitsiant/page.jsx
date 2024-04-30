@@ -3,6 +3,8 @@ import { IoSearchOutline } from "react-icons/io5";
 import { About, Button, Comments, InfoCard } from "@/components";
 import { MdFilterList } from "react-icons/md";
 import Image from "next/image";
+import Filter from "@/components/filter";
+import FilterButton from "@/components/filter-button";
 
 export const metadata = {
   title: "Ofitsiantlar",
@@ -43,7 +45,7 @@ const Ofitsian = () => {
   ];
   return (
     <>
-      <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
+      <main className="px-[7%] h-screen bg-hero   md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="2xl:w-[85%] xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl  text-3xl font-bold">
             Sharhlar va narxlar bilan Toshkentdagi tadbir uchun ofitsiantlar
@@ -57,16 +59,13 @@ const Ofitsian = () => {
         </div>
       </main>
       <div>
-        <div className="flex px-[7%] justify-between">
-          <h2 className="font-bold text-3xl">
+        <div className="flex px-[7%] justify-between relative">
+          <h2 className="font-bold text-3xl ">
             Mutaxassislar ma&apos;lumotnomasi
           </h2>
-          <button className="flex gap-4 items-center">
-            <MdFilterList />
-            Filtr
-          </button>
+         <FilterButton />
         </div>
-        <div className="grid grid-cols-3 py-6 px-[7%] gap-6">
+        <div className="grid md:grid-cols-3 py-6 px-[7%] gap-6">
           {datas.map((item) => (
             <InfoCard key={item.id} data={item} />
           ))}
@@ -83,7 +82,7 @@ const Ofitsian = () => {
         <h2 className="text-3xl font-bold">
           Tadbir uchun ofitsiant - tug&apos;ulgan kun dasturxonidan fotosurat
         </h2>
-        <div className="grid grid-cols-3 my-4 gap-6">
+        <div className="grid md:grid-cols-3 my-4 gap-6">
           <div className="relative rounded-xl h-80">
             <Image src="/images/dasturxon.png" alt="tozalikda" fill />
           </div>
