@@ -90,7 +90,7 @@ const SpecialistId = ({ params }) => {
         </div>
         <button className="rounded-xl py-4 px-14 bg-transparent mt-6 border-2 border-sky-600">
           <h2 className="text-2xl font-semibold px-3 text-sky-600">
-            Hammasini ko'rish (2)
+            Hammasini ko&apos;rish (2)
           </h2>
         </button>
         <div className="mt-3">
@@ -109,7 +109,7 @@ const SpecialistId = ({ params }) => {
           </div>
           <div className="border-2 rounded-md  border-green-600 pr-10 px-2">
             <h3 className="text-lg font-semibold text-green-500">
-              NOPOK KO'RINDI - 0
+              NOPOK KO&apos;RINDI - 0
             </h3>
           </div>
         </div>
@@ -165,21 +165,21 @@ const SpecialistId = ({ params }) => {
           <div className="bg-white p-10 mt-5 rounded-xl">
             <h2>
               Mutaxassis bu blokni hali tugatmagan. Siz uni anonim tarzda
-              tavsiya qilishingiz mumkin "To'ldirishni tavsiya etaman" tugmasini
-              bosish orqali ushbu ma'lumotni shaklda ko'rsating
+              tavsiya qilishingiz mumkin &quot;To&apos;ldirishni tavsiya etaman&quot; tugmasini
+              bosish orqali ushbu ma&apos;lumotni shaklda ko&apos;rsating
             </h2>
           </div>
         </div>
 
         <div className="mt-11">
           <h2 className="text-lg font-semibold text-gray">
-            Ta'lim va kurslar (0)
+            Ta&apos;lim va kurslar (0)
           </h2>
           <div className="bg-white p-10 mt-5 rounded-xl">
             <h2>
               Mutaxassis bu blokni hali tugatmagan. Siz uni anonim tarzda
-              tavsiya qilishingiz mumkin "To'ldirishni tavsiya etaman" tugmasini
-              bosish orqali ushbu ma'lumotni shaklda ko'rsating
+              tavsiya qilishingiz mumkin &quot;To&apos;ldirishni tavsiya etaman&quot; tugmasini
+              bosish orqali ushbu ma&apos;lumotni shaklda ko&apos;rsating
             </h2>
           </div>
         </div>
