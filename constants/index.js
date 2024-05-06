@@ -3,6 +3,12 @@ export const datas = [
     id: "1",
     name: "Irina",
     src: "/images/face-1.png",
+    rating: {
+      halol: 3,
+      rostguy: 4,
+      sifat: 5,
+      tezlik: 2,
+    },
     premium: true,
     comments: [{ id: "name", comment: "Judayam Yaxshi" }],
     description:
@@ -12,6 +18,12 @@ export const datas = [
     id: "2",
     name: "Omina",
     src: "/images/face-2.png",
+    rating: {
+      halol: 3,
+      rostguy: 4,
+      sifat: 5,
+      tezlik: 2,
+    },
     premium: true,
     comments: [
       { id: "name", comment: "Judayam Yaxshi" },
@@ -24,7 +36,13 @@ export const datas = [
   {
     id: "3",
     name: "Janar",
-    src: "",
+    src: "/images/face-3",
+    rating: {
+      halol: 3,
+      rostguy: 4,
+      sifat: 5,
+      tezlik: 2,
+    },
     premium: true,
     comments: [{ id: "name", comment: "Judayam Yaxshi" }],
     description:

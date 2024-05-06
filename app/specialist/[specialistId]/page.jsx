@@ -1,10 +1,12 @@
 "use client";
 import { Button, Flags } from "@/components";
+import Filter from "@/components/filter";
+import FilterDisabled from "@/components/filter-disabled";
 import { datas } from "@/constants";
 import Image from "next/image";
 import React, { useState } from "react";
 import { MdStarRate } from "react-icons/md";
-import "./style.css";
+// import "./style.css";
 
 const SpecialistId = ({ params }) => {
   //   console.log(params);
@@ -44,6 +46,9 @@ const SpecialistId = ({ params }) => {
           </h2>
           <Button padding>So&apos;rov yaratish</Button>
         </div>
+        <div className="w-full h-80 bg-red-300 mt-6">
+        <FilterDisabled />
+        </div>
       </aside>
       <div className="px-6 my-6">
         <h2 className="text-2xl font-bold text-gray">Men Haqimda</h2>
@@ -73,7 +78,6 @@ const SpecialistId = ({ params }) => {
               0
             </h2>
           </button>
-
 
           <button className="rounded-xl py-6 px-7 bg-white relative">
             <div className="relative w-12 h-12">
@@ -118,7 +122,7 @@ const SpecialistId = ({ params }) => {
           <div class="flex flex-col">
             <Image
               class="w-full h-auto"
-              src="/images/image1.jpg"
+              src="/images/panel03.jpg"
               alt="tozalikda"
               width={400}
               height={400}
@@ -129,7 +133,7 @@ const SpecialistId = ({ params }) => {
           <div class="flex flex-col">
             <Image
               class="w-full h-auto"
-              src="/images/image2.jpg"
+              src="/images/panel03.jpg"
               alt="tozalikda"
               width={400}
               height={400}
@@ -140,7 +144,7 @@ const SpecialistId = ({ params }) => {
           <div class="flex flex-col">
             <Image
               class="w-full h-auto"
-              src="/images/image3.jpg"
+              src="/images/panel03.jpg"
               alt="tozalikda"
               width={400}
               height={400}
@@ -168,7 +172,9 @@ const SpecialistId = ({ params }) => {
         </div>
 
         <div className="mt-11">
-          <h2 className="text-lg font-semibold text-gray">Ta'lim va kurslar (0)</h2>
+          <h2 className="text-lg font-semibold text-gray">
+            Ta'lim va kurslar (0)
+          </h2>
           <div className="bg-white p-10 mt-5 rounded-xl">
             <h2>
               Mutaxassis bu blokni hali tugatmagan. Siz uni anonim tarzda

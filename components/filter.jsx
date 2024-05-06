@@ -3,10 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 
 const Filter = () => {
-  const [falsafa, setfalsafa] = useState(0);
-  const [mano, setmano] = useState(0);
-  const [ishchan, setishchan] = useState(0);
-  const [halol, sethalol] = useState(0);
+  // const rating = {
+  //   halol: 3,
+  //   rostguy: 4,
+  //   sifat: 5,
+  //   tezlik: 2,
+  // };
+  const [halol, setHalol] = useState(0);
+  const [rostguy, setRostguy] = useState(0);
+  const [sifat, setSifat] = useState(0);
+  const [tezlik, setTezlik] = useState(0);
   return (
     <>
       {/* <div className="w-96 h-80 flex  justify-center items-center bg-blue-500">
@@ -64,7 +70,7 @@ const Filter = () => {
         </div>
       </div> */}
 
-      <div className="md:w-[461px] md:h-[400px] bg-blue bg-opacity-90 relative rounded-lg flex justify-center items-center">
+      <div className="md:w-[461px] md:h-[400px] z-[100]  bg-opacity-90 relative rounded-lg flex justify-center items-center">
         <div className="absolute top-0 w-full h-full md:block hidden ">
           <p className="absolute top-0 w-full text-center">API</p>
           <p className="absolute top-10 w-full text-left">Architecture</p>
@@ -94,36 +100,64 @@ const Filter = () => {
                 min={0}
                 max={5}
                 type="range"
-                className="rotate-180 w-1/2"
+                value={halol}
+                onChange={(e) => setHalol(e.target.value)}
+                className="activeInput rotate-180 w-1/2"
               />
-              <input min={0} max={5} type="range" className=" w-1/2" />
+              <input
+                min={0}
+                max={5}
+                type="range"
+                className=" w-1/2 activeInput"
+              />
             </div>
             <div className="w-full h-6  top-[46.5%] flex justify-between items-center gap-12 rotate-45 absolute">
               <input
                 min={0}
                 max={5}
                 type="range"
-                className="rotate-180 w-1/2"
+                value={rostguy}
+                onChange={(e) => setRostguy(e.target.value)}
+                className="activeInput rotate-180 w-1/2"
               />
-              <input min={0} max={5} type="range" className=" w-1/2" />
+              <input
+                min={0}
+                max={5}
+                type="range"
+                className=" w-1/2 activeInput"
+              />
             </div>
             <div className="w-full h-6  top-[46.5%] flex justify-between items-center gap-12 rotate-90 absolute">
               <input
                 min={0}
                 max={5}
                 type="range"
-                className="rotate-180 w-1/2"
+                value={tezlik}
+                onChange={(e) => setTezlik(e.target.value)}
+                className="activeInput rotate-180 w-1/2"
               />
-              <input min={0} max={5} type="range" className=" w-1/2" />
+              <input
+                min={0}
+                max={5}
+                type="range"
+                className=" w-1/2 activeInput"
+              />
             </div>
             <div className="w-full h-6  top-[46.5%] flex justify-between items-center gap-12 -rotate-45 absolute">
               <input
                 min={0}
                 max={5}
                 type="range"
-                className="rotate-180 w-1/2"
+                value={sifat}
+                onChange={(e) => setSifat(e.target.value)}
+                className="activeInput rotate-180 w-1/2"
               />
-              <input min={0} max={5} type="range" className=" w-1/2" />
+              <input
+                min={0}
+                max={5}
+                type="range"
+                className=" w-1/2 activeInput"
+              />
             </div>
           </div>
         </div>
