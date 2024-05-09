@@ -9,6 +9,7 @@ import {
   Heading,
   ServiceCard,
 } from "@/components";
+import Service from "@/components/service";
 
 export default function Spec() {
   const obj = [
@@ -78,31 +79,8 @@ export default function Spec() {
           </div>
         </div>
       </main>
-      <div className="px-[7%] my-12  grid 2xl:grid-cols-4 md:grid-cols-2 gap-6 ">
-        <div className="px-4 py-6 ">
-          <h2 className="font-bold text-3xl">
-            Toshkentda eyesberg.uz da qanday mutaxassis topsa boladi?
-          </h2>
-          <p className="text-gray py-4">
-            5 daqiqada eng yaxshi mutaxassisni toping!
-          </p>
-          <Link href="/" className="flex text-gray items-center gap-4 ">
-            <button className="w-12 h-12 rounded-full border-2 border-gray-400 flex justify-center items-center">
-              <FaChevronRight />
-            </button>
-            <p>Promo videoni tomosha qiling</p>
-          </Link>
-        </div>
-        {obj.map((item) => (
-          <div className="bg-white px-6 py-6" key={item.id}>
-            <span className="text-blue font-bold my-4 block text-2xl">
-              {item.id}
-            </span>
-            <h2 className="font-bold text-3xl">{item.title}</h2>
-            <p className="mt-6 text-gray">{item.description}</p>
-          </div>
-        ))}
-      </div>
+      <Service />
+
       <div className="px-[7%] my-12">
         <Heading>Toshkent da toifalar bo&apos;yicha xizmatlar</Heading>
         <div className="grid 2xl:grid-cols-3 md:grid-cols-2 2xl:gap-12 gap-6 2xl:h-80 mt-12 ">

@@ -10,12 +10,9 @@ import {
   ServiceCard,
 } from "@/components";
 import Service from "@/components/service";
+import MyAutocomplete from "@/components/auto-complete";
 
 export default function Home() {
-
-
-  
-
   const datas = [
     {
       id: "tozalash",
@@ -30,6 +27,7 @@ export default function Home() {
       desc: "Cafe & Restaurant uchun ofitsiantlar ",
     },
   ];
+
   return (
     <>
       <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
@@ -38,15 +36,8 @@ export default function Home() {
             <span className="text-blue">Toshkent</span>dagi eng yaxshi
             mutaxassislar
           </h1>
-          <div className="relative h-auto md:h-14 md:flex mt-6 md:bg-white rounded-xl justify-between w-full p-1">
-            <IoSearchOutline className="absolute left-2 md:top-[30%] top-4  text-2xl" />
-            <input
-              type="text"
-              className="md:bg-transparent md:border-none mb-4 h-14 bg-white w-full rounded-xl md:w-[65%] outline-none indent-8"
-              placeholder="Mutaxasislarni qidirish"
-            />
-            <Button>Arizani Qoldirish</Button>
-          </div>
+            <MyAutocomplete />
+           
           <div className="mt-4 flex gap-4 ">
             <Link
               href="/"

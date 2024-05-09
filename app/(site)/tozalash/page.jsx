@@ -3,6 +3,7 @@ import { Button, InfoCard } from "@/components";
 import Image from "next/image";
 import { datas } from "@/constants";
 import FilterButton from "@/components/filter-button";
+import Link from "next/link";
 
 export const metadata = {
   title: "Farrosh",
@@ -17,9 +18,9 @@ const Tozalik = () => {
             Bemalol o&apos;zi ishlaringiz bilan shug&apos;ullanib tozalashni
             Professionalga qo&apos;yib bering va buyurtma qining
           </p>
-          <div className="mt-4 flex gap-4 ">
+          <Link href={"/order"} className="mt-4 flex gap-4 ">
             <Button padding>Buyurtma</Button>
-          </div>
+          </Link>
         </div>
       </main>
       <div className="px-[7%]">

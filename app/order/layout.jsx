@@ -1,14 +1,12 @@
 import { Navbar } from "@/components";
 import React from "react";
-import "./../../globals.css";
-import LoginModal from "@/components/login-modal";
+import "../globals.css";
 
 export default function RootLayout({ children, params }) {
   return (
     <html lang="en">
-      <title>{params.specialistId}</title>
+      <title>What the hell</title>
       <body suppressHydrationWarning={true}>
-        <LoginModal />
         <Navbar />
         {children}
       </body>

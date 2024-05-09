@@ -2,6 +2,7 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 import { Button } from ".";
 import useLoginModal from "@/hooks/use-loginmodal";
@@ -22,19 +23,20 @@ const LoginModal = () => {
                 <MdClose />
               </button>
             </div>
-            <h2 className="font-bold text-xl">Введите свой телефон</h2>
+            <h2 className="font-bold text-xl">Введите свой email</h2>
             <div className="flex px-4 rounded-lg  my-5 items-center border">
-              <FaPhone />
+              <MdEmail />
               <input
                 className="py-3  outline-none indent-4"
                 type="text"
-                placeholder="+998901234567"
+                placeholder="example@gmail.com"
               />
             </div>
             <p className="my-6">
-              Нажимая “Далее”, вы соглашаетесь с 
-              <Link href="/" className="text-blue underline" >
-               {" "}правилами сервиса
+              Нажимая Далее, вы соглашаетесь с
+              <Link href="/" className="text-blue underline">
+                {" "}
+                правилами сервиса
               </Link>
             </p>
             <div className="flex justify-center">
