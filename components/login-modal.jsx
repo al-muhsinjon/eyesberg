@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { MdClose } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
 
@@ -87,7 +87,7 @@ const LoginModal = () => {
   };
 
   return (
-    <>
+    <Suspense>
       {auth === "sign-up" && (
         <div className="w-full flex justify-center items-center fixed z-10 h-screen bg-black bg-opacity-30">
           <div className="bg-white px-10 py-8 md:w-[25%] w-full rounded-md">
@@ -266,7 +266,7 @@ const LoginModal = () => {
           </div>
         </div>
       )}
-    </>
+    </Suspense>
   );
 };
 

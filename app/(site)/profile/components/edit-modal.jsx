@@ -1,5 +1,5 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import React from "react";
+import React, { Suspense } from "react";
 import { MdClose } from "react-icons/md";
 
 const EditModal = () => {
@@ -10,7 +10,7 @@ const EditModal = () => {
   const router = useRouter();
 
   return (
-    <>
+    <Suspense>
       {edit === "true" && (
         <div className="w-full top-0 flex justify-center items-center fixed z-10 h-screen bg-black bg-opacity-30">
           <div className="bg-white px-10 py-8 md:w-[25%] w-full rounded-md">
@@ -26,7 +26,7 @@ const EditModal = () => {
           </div>
         </div>
       )}
-    </>
+    </Suspense>
   );
 };
 

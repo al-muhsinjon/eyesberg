@@ -100,7 +100,7 @@
 // export default WorkForm;
 
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { FaPhone } from "react-icons/fa6";
 import SelectDo from "./components/select-do";
 import SelectTime from "./components/select-time";
@@ -126,100 +126,102 @@ const OrderPage = () => {
   const [images, setImage] = useState([]);
 
   return (
-    <div className="px-[7%] py-12">
-      {/* ------ START ----- */}
+    <Suspense>
+      <div className="px-[7%] py-12">
+        {/* ------ START ----- */}
 
-      <div role="presentation" className="my-6">
-        <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" color="inherit" href="/">
-            Home
-          </Link>
+        <div role="presentation" className="my-6">
+          <Breadcrumbs aria-label="breadcrumb">
+            <Link underline="hover" color="inherit" href="/">
+              Home
+            </Link>
 
-          <Link
-            underline="hover"
-            color="text.primary"
-            href="order"
-            aria-current="page"
-          >
-            Create Orders
-          </Link>
-        </Breadcrumbs>
-      </div>
+            <Link
+              underline="hover"
+              color="text.primary"
+              href="order"
+              aria-current="page"
+            >
+              Create Orders
+            </Link>
+          </Breadcrumbs>
+        </div>
 
-      {/* ------ End ------  */}
+        {/* ------ End ------  */}
 
-      <div className="">
-        <h2 className="text-xl py-2 font-semibold text-gray">
-          Nima ish qilish kerak?*
-        </h2>
-        <textarea
-          value={textArea}
-          onChange={(e) => setTextArea(e.target.value)}
-          className="w-full outline-none shadow-md border-none p-4 resize-none rounded-3xl"
-          placeholder="
+        <div className="">
+          <h2 className="text-xl py-2 font-semibold text-gray">
+            Nima ish qilish kerak?*
+          </h2>
+          <textarea
+            value={textArea}
+            onChange={(e) => setTextArea(e.target.value)}
+            className="w-full outline-none shadow-md border-none p-4 resize-none rounded-3xl"
+            placeholder="
           Укажите больше подробностей, чтобы специалисты могли точно оценить объем работы"
-          cols="30"
-          rows="10"
-        ></textarea>
+            cols="30"
+            rows="10"
+          ></textarea>
+          <h2 className="text-xl py-4  font-semibold text-gray">
+            Qanday bog&apos;lansa bo&apos;ladi?
+          </h2>
+          <div className="flex items-center gap-3 px-4 rounded-2xl shadow-md bg-white">
+            <FaPhone className="text-gray" />
+            <input
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              type="text"
+              placeholder="Enter phone number"
+              className="outline-none bg-transparent w-full py-4"
+            />
+          </div>
+        </div>
         <h2 className="text-xl py-4  font-semibold text-gray">
-          Qanday bog&apos;lansa bo&apos;ladi?
+          Qachon va qaysi vaqtda?
         </h2>
-        <div className="flex items-center gap-3 px-4 rounded-2xl shadow-md bg-white">
-          <FaPhone className="text-gray" />
-          <input
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            type="text"
-            placeholder="Enter phone number"
-            className="outline-none bg-transparent w-full py-4"
-          />
+        <div className="flex justify-between gap-6">
+          <SelectDo setSelectDo={setSelectDo} />
+          <SelectTime selectTime={selectTime} setSelectTime={setSelectTime} />
         </div>
-      </div>
-      <h2 className="text-xl py-4  font-semibold text-gray">
-        Qachon va qaysi vaqtda?
-      </h2>
-      <div className="flex justify-between gap-6">
-        <SelectDo setSelectDo={setSelectDo} />
-        <SelectTime selectTime={selectTime} setSelectTime={setSelectTime} />
-      </div>
-      <h2 className="text-xl py-4  font-semibold text-gray">
-        Nechpul to&apos;lov?
-      </h2>
-      <div className="flex justify-between gap-6">
-        <div className=" px-4 w-full rounded-2xl shadow-md bg-white">
-          <input
-            value={tolovDan}
-            onChange={(e) => setTolovDan(e.target.value)}
-            type="text"
-            placeholder="Dan"
-            className="outline-none bg-transparent w-full py-4"
-          />
+        <h2 className="text-xl py-4  font-semibold text-gray">
+          Nechpul to&apos;lov?
+        </h2>
+        <div className="flex justify-between gap-6">
+          <div className=" px-4 w-full rounded-2xl shadow-md bg-white">
+            <input
+              value={tolovDan}
+              onChange={(e) => setTolovDan(e.target.value)}
+              type="text"
+              placeholder="Dan"
+              className="outline-none bg-transparent w-full py-4"
+            />
+          </div>
+          <div className=" px-4 w-full rounded-2xl shadow-md bg-white">
+            <input
+              value={tolovGacha}
+              onChange={(e) => setTolovGacha(e.target.value)}
+              type="text"
+              placeholder="Gacha"
+              className="outline-none bg-transparent w-full py-4"
+            />
+          </div>
         </div>
-        <div className=" px-4 w-full rounded-2xl shadow-md bg-white">
-          <input
-            value={tolovGacha}
-            onChange={(e) => setTolovGacha(e.target.value)}
-            type="text"
-            placeholder="Gacha"
-            className="outline-none bg-transparent w-full py-4"
-          />
+        <h2 className="text-xl py-4  font-semibold text-gray">
+          Rasm yoki video qo&apos;shish{" "}
+        </h2>
+        <div className="">
+          <FileUpload setImage={setImage} />
         </div>
-      </div>
-      <h2 className="text-xl py-4  font-semibold text-gray">
-        Rasm yoki video qo&apos;shish{" "}
-      </h2>
-      <div className="">
-        <FileUpload setImage={setImage} />
-      </div>
-      <h2 className="text-xl py-4  font-semibold text-gray">
-        To&apos;lov turini tanlang{" "}
-      </h2>
-      <SelectCostType setCostType={setCostType} />
+        <h2 className="text-xl py-4  font-semibold text-gray">
+          To&apos;lov turini tanlang{" "}
+        </h2>
+        <SelectCostType setCostType={setCostType} />
 
-      <div className="px-12 flex justify-center items-center py-12">
-        <Button>Ro&apos;yxatdan o&apos;tish</Button>
+        <div className="px-12 flex justify-center items-center py-12">
+          <Button>Ro&apos;yxatdan o&apos;tish</Button>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 };
 
