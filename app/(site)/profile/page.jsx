@@ -9,7 +9,7 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { MdStarRate } from "react-icons/md";
 import EditModal from "./components/edit-modal";
 // import "./style.css";
@@ -66,7 +66,9 @@ const SpecialistId = () => {
 
   return (
     <>
-      <EditModal />
+      <Suspense>
+        <EditModal />
+      </Suspense>
       <div className=" md:flex flex-wrap px-[7%] py-20">
         <aside className="md:w-[25%] md:border-none border-b my-6 text-center">
           <div className="bg-white rounded-xl py-14">

@@ -12,7 +12,7 @@ import {
 } from "@/components";
 import Service from "@/components/service";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 export default function Spec() {
   const router = useRouter();
@@ -66,7 +66,7 @@ export default function Spec() {
     },
   ];
   return (
-    <>
+    <Suspense>
       <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="2xl:w-1/2 xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl w-[70%] text-3xl font-bold">
@@ -108,6 +108,6 @@ export default function Spec() {
       <About />
       <Comments />
       <Faq />
-    </>
+    </Suspense>
   );
 }

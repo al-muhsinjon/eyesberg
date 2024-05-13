@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { About, Button, Comments, InfoCard } from "@/components";
 import { MdFilterList } from "react-icons/md";
@@ -46,7 +46,7 @@ const Ofitsian = () => {
     },
   ];
   return (
-    <>
+    <Suspense>
       <title>Ofitsiantlar</title>
       <main className="px-[7%] h-screen bg-hero   md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="2xl:w-[85%] xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
@@ -106,7 +106,7 @@ const Ofitsian = () => {
       </div>
       <About />
       <Comments />
-    </>
+    </Suspense>
   );
 };
 

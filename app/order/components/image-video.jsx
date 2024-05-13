@@ -35,6 +35,7 @@
 
 "use client";
 
+import Image from "next/image";
 // import React, { useState } from "react";
 
 // export default function FileUpload() {
@@ -237,9 +238,11 @@ export default function FileUpload({ setImage }) {
       {selectedFiles.map((file, index) => (
         <div key={index} className="relative mr-4 mb-4">
           {file.type.startsWith("image") ? (
-            <img
+            <Image
               src={URL.createObjectURL(file)}
               alt="Selected File"
+              width={160}
+              height={160}
               className="w-40 h-40 object-cover rounded-lg"
             />
           ) : (

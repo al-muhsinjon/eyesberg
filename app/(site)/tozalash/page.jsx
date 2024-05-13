@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Button, InfoCard } from "@/components";
 import Image from "next/image";
 import { datas } from "@/constants";
@@ -10,7 +10,7 @@ export const metadata = {
 };
 const Tozalik = () => {
   return (
-    <>
+    <Suspense>
       <main className="px-[7%] h-screen bg-hero  md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="2xl:w-[85%] xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl  text-3xl font-bold">General tozalash </h1>
@@ -76,7 +76,7 @@ const Tozalik = () => {
           </div>
         </div>
       </div>
-    </>
+    </Suspense>
   );
 };
 

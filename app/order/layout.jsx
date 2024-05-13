@@ -1,5 +1,5 @@
 import { Navbar } from "@/components";
-import React from "react";
+import React, { Suspense } from "react";
 import "../globals.css";
 
 export default function RootLayout({ children, params }) {
@@ -8,7 +8,7 @@ export default function RootLayout({ children, params }) {
       <title>What the hell</title>
       <body suppressHydrationWarning={true}>
         <Navbar />
-        {children}
+        <Suspense>{children}</Suspense>
       </body>
     </html>
   );
