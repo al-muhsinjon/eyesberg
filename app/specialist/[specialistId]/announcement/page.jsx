@@ -85,7 +85,7 @@ const AnnouncementPage = ({ params }) => {
             Mening e&apos;lonlarim
           </h2>
           <p className="text-2xl font-semibold text-gray my-2">
-            Javoblarni ko'rish uchun ilova ustiga bosing
+            Javoblarni ko&apos;rish uchun ilova ustiga bosing
           </p>
 
           <div className="flex justify-between gap-8 ">

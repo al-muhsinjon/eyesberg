@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { About, Button, Comments, InfoCard } from "@/components";
@@ -5,11 +7,11 @@ import { MdFilterList } from "react-icons/md";
 import Image from "next/image";
 import Filter from "@/components/filter";
 import FilterButton from "@/components/filter-button";
+import { useRouter } from "next/navigation";
 
-export const metadata = {
-  title: "Ofitsiantlar",
-};
 const Ofitsian = () => {
+  const router = useRouter();
+
   const datas = [
     {
       id: "1",
@@ -45,6 +47,7 @@ const Ofitsian = () => {
   ];
   return (
     <>
+      <title>Ofitsiantlar</title>
       <main className="px-[7%] h-screen bg-hero   md:bg-[url(/images/hero.png)] bg-no-repeat bg-right ">
         <div className="2xl:w-[85%] xl:w-1/2  h-[80vh] flex flex-col py-24 justify-around p-4">
           <h1 className="md:text-6xl  text-3xl font-bold">
@@ -54,7 +57,9 @@ const Ofitsian = () => {
             So&apos;rov qoldiring yoki katalogdagi mutaxassisni tanlang
           </p>
           <div className="mt-4 flex gap-4 ">
-            <Button padding>Buyurtma</Button>
+            <Button onClick={() => router.push("/order")} padding>
+              Buyurtma
+            </Button>
           </div>
         </div>
       </main>
@@ -63,7 +68,7 @@ const Ofitsian = () => {
           <h2 className="font-bold text-3xl ">
             Mutaxassislar ma&apos;lumotnomasi
           </h2>
-         <FilterButton />
+          <FilterButton />
         </div>
         <div className="grid md:grid-cols-3 py-6 px-[7%] gap-6">
           {datas.map((item) => (

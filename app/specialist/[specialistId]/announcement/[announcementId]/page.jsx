@@ -40,7 +40,7 @@ const AnnouncementIdPage = ({ params }) => {
             " Lorem Ipsum is simply dummy text of the printing and typesettingindustry. Lorem Ipsum has been the industry's standard dummy text eversince the 1500s"
           }
         </h3>
-        <p className="text-lg text-gray font-semibold my-4 ">{800} ming so'm </p>
+        <p className="text-lg text-gray font-semibold my-4 ">{800} ming so&apos;m </p>
         <Button>Buyurtma yakunlash</Button>
       </div>
     </div>

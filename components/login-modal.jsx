@@ -169,7 +169,7 @@ const LoginModal = () => {
               </div>
             </form>
             <p>
-              Accountingiz bo'lsa
+              Accountingiz bo&apos;lsa
               <Link className="text-blue underline" href="?auth=login">
                 {" "}
                 kiring
@@ -255,7 +255,7 @@ const LoginModal = () => {
                 </div>
               </form>
               <p>
-                Akkountingiz bo'lmasa
+                Akkountingiz bo&apos;lmasa
                 <Link className="text-blue underline" href={"?auth=sign-up"}>
                   {" "}
                   ro&apos;yxatdan{" "}
