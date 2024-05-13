@@ -1,3 +1,4 @@
+"use client";
 import { IoSearchOutline } from "react-icons/io5";
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
@@ -10,8 +11,25 @@ import {
   ServiceCard,
 } from "@/components";
 import Service from "@/components/service";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Spec() {
+  const router = useRouter();
+
+  const token =
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("token")) || ""
+      : "";
+
+  const createAcc = () => {
+    if (token) {
+      router.push("/profile");
+    } else {
+      router.push("?auth=login");
+    }
+  };
+
   const obj = [
     {
       id: 1,
@@ -54,25 +72,17 @@ export default function Spec() {
           <h1 className="md:text-6xl w-[70%] text-3xl font-bold">
             <span className="text-blue">Toshkent</span>dan yaxshi ish toping
           </h1>
-          <div className="relative h-auto md:h-14 md:flex mt-6 md:bg-white rounded-xl justify-between w-full p-1">
-            <IoSearchOutline className="absolute left-2 md:top-[30%] top-4  text-2xl" />
-            <input
-              type="text"
-              className="md:bg-transparent md:border-none mb-4 h-14 bg-white w-full rounded-xl md:w-[65%] outline-none indent-8"
-              placeholder="Mutaxasislarni qidirish"
-            />
-            <Button>Arizani Qoldirish</Button>
-          </div>
+          <Button onClick={createAcc}>Account Yaratish</Button>
           <div className="mt-4 flex gap-4 ">
             <Link
               href="/"
-              className="py-2 px-3 text-gray-500 border-gray-500 border-2  rounded-xl"
+              className="py-2 px-3 border-[#2993FF] text-[#2993FF] hover:bg-[#2993FF] hover:text-white ease-in font-bold border-2  rounded-xl"
             >
               Mutaxassis Topish
             </Link>
             <Link
               href="/spec"
-              className="py-2 px-4 text-white font-bold bg-blue rounded-xl"
+              className="py-2 px-4 hover:bg-white hover:text-blue hover:border-2 border-2 border-[#2993FF] text-white font-bold bg-blue rounded-xl"
             >
               Ish topish
             </Link>

@@ -4,11 +4,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectTime() {
+export default function SelectTime({ setSelectTime }) {
   const [time, setTime] = React.useState("Har qanday vaqt");
 
   const handleChange = (event) => {
     setTime(event.target.value);
+    setSelectTime(event.target.value);
   };
 
   //   TODO: Time

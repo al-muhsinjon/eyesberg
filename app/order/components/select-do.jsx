@@ -4,11 +4,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectDo() {
+export default function SelectDo({ setSelectDo }) {
   const [age, setAge] = React.useState("Har qanday kun");
 
   const handleChange = (event) => {
     setAge(event.target.value);
+    setSelectDo(event.target.value);
   };
 
   function oxirgiKunniChiqar() {

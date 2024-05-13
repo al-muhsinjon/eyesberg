@@ -3,16 +3,28 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete, { createFilterOptions } from "@mui/material/Autocomplete";
 import { Button } from ".";
+import { useRouter } from "next/navigation";
 
 const filter = createFilterOptions();
 
 export default function FreeSoloCreateOption() {
   const [value, setValue] = React.useState(null);
 
+  const router = useRouter();
+
+  const orderPush = () => {
+    if (value !== null) {
+      router.push(`/order?ordername=${value.title}`);
+    } else {
+      router.push("/order");
+    }
+  };
+
   return (
     <div className="relative bg-white h-auto md:h-14 md:flex mt-6  justify-between w-full p-1">
       <Autocomplete
         value={value}
+        style={{ borderRadius: "10px !important" }}
         onChange={(event, newValue) => {
           if (typeof newValue === "string") {
             setValue({
@@ -62,14 +74,18 @@ export default function FreeSoloCreateOption() {
           return option.title;
         }}
         renderOption={(props, option) => <li {...props}>{option.title}</li>}
-        sx={{ width: "100%" }}
+        sx={{ width: "100%", border: "none" }}
         freeSolo
         renderInput={(params) => (
-          <TextField {...params} placeholder="Поиск специалистов" />
+          <TextField
+            {...params}
+            sx={{ border: "none", outline: "none" }}
+            placeholder="Поиск специалистов"
+          />
         )}
       />
       <div className="absolute right-2 top-3">
-        <Button>Arizani Qoldirish</Button>
+        <Button onClick={orderPush}>Arizani Qoldirish</Button>
       </div>
     </div>
   );

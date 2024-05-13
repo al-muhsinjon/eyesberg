@@ -2,11 +2,12 @@
 import { FormControl, MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
 
-const SelectCostType = () => {
+const SelectCostType = ({ setCostType }) => {
   const [type, setType] = useState("kartayokinaqd");
 
   const handleChange = (event) => {
     setType(event.target.value);
+    setCostType(event.target.value);
   };
 
   return (

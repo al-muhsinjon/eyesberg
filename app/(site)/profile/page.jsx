@@ -1,41 +1,70 @@
 "use client";
 import { Button, Flags } from "@/components";
 import Filter from "@/components/filter";
+import { MdEdit } from "react-icons/md";
 import FilterDisabled from "@/components/filter-disabled";
 import { datas } from "@/constants";
 import useUserNumber from "@/hooks/use-userNumber";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdStarRate } from "react-icons/md";
 // import "./style.css";
 
-const SpecialistId = ({ params }) => {
+const SpecialistId = () => {
   //   console.log(params);
   //   const [specilaist, setSpecialist] = useState();
+  const [editor, setEditor] = useState(true);
+  const edit = () => {
+    setEditor(false);
+  };
+
+  const config = {
+    headers: {
+      Authorization: "Bearer " + process.env.NEXT_PUBLIC_API_KEY,
+      "Content-Type": "application/json",
+    },
+  };
+
+  const boss = async () => {
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API}/cleaners/works/`,
+      config
+    );
+    console.log(response.data);
+  };
+
+  const params = 1;
 
   const data = datas.filter((data) => data.id === params.specialistId);
   const pathname = usePathname();
   const num = +pathname.split("/specialist/")[1];
   const navigate = useRouter();
 
+  const premium = true;
+  const description =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit adipisci omnis ducimus odit, eius earum obcaecati eligendi nostrum delectus temporibus tenetur mollitia facere, officia iusto possimus nulla? Officiis, eum similique!";
+
   //   return <div>Bunday joy yo'q</div>;
   // }
 
-  const { src, comments, description, id, name, premium } = data[0];
   const userNumber = useUserNumber();
   const handleClick = () => {
     navigate.push("/order?worker_id=" + id);
   };
 
   return (
-    <div className="flex px-[7%] py-20">
-      <aside className="w-96 my-6 text-center">
+    <div className=" md:flex flex-wrap px-[7%] py-20">
+      <aside className="md:w-[25%] md:border-none border-b my-6 text-center">
         <div className="bg-white rounded-xl py-14">
-          <div className="relative mx-auto w-60 h-60 rounded-full p-2 overflow-hidden">
+          <div
+            onClick={boss}
+            className="relative border bg-gray mx-auto md:w-60 w-[85%] md:h-60 h-60 rounded-full p-2 overflow-hidden"
+          >
             <Image
-              src={src || "/images/user-icon.png"}
+              src={"/images/user-icon.png"}
               className="object-cover aspect-square"
               alt="User"
               fill
@@ -46,15 +75,27 @@ const SpecialistId = ({ params }) => {
               premium ? "text-blue" : "text-black"
             }`}
           >
-            {name}
+            {"Muhsinjon"}
             {premium && <MdStarRate size={12} />}
           </h2>
           <p className="my-4 text-gray">20 yil —— Naimida 0 yil 1 oy.</p>
           <Flags />
-          <Button onClick={handleClick} padding className="">
-            Qo&apos;ng&apos;iroq qiling
+          <Button padding className="">
+            Tahrirlash
           </Button>
         </div>
+
+        <div className="p-6 rounded-xl bg-sky-200 bg-opacity-50 mt-6">
+          <h2 className="mb-4 text-blue font-bold text-2xl">Xabarnoma</h2>
+          <p className="my-4 text-blue opacity-70 font-semibold">
+            Xabarnomalarni tekshirib turish esingizdan chiqmasin
+          </p>
+
+          <Button onClick={() => navigate.push(`notification`)} padding>
+            Ko&apos;rish
+          </Button>
+        </div>
+
         <div className="p-6 rounded-xl bg-sky-200 bg-opacity-50 mt-6">
           <h2 className="mb-4 text-blue font-bold text-2xl">
             Yaxshilari kerak mutaxassislar?
@@ -65,9 +106,23 @@ const SpecialistId = ({ params }) => {
           <FilterDisabled />
         </div>
       </aside>
-      <div className="px-6 my-6">
+      <div className="md:px-6 md:w-[70%] my-6">
         <h2 className="text-2xl font-bold text-gray">Men Haqimda</h2>
-        <p className="my-6 p-9 bg-white rounded-xl">{description}</p>
+        <div className="relative">
+          <button
+            className="absolute right-2 border rounded-full p-2 top-8"
+            onClick={edit}
+          >
+            <MdEdit />
+          </button>
+
+          <textarea
+            readOnly={editor}
+            value={description}
+            className="my-6 p-9 h-48 min-w-full  bg-white rounded-xl resize-none"
+          ></textarea>
+          {!editor && <Button onClick={() => setEditor(true)}>saqlash</Button>}
+        </div>
         <h2 className="text-xl font-semibold text-gray my-4">
           Xizmatlar va narxlar (6)
         </h2>
@@ -75,30 +130,30 @@ const SpecialistId = ({ params }) => {
           Mijozlarning sharhlari (2)
         </h2>
 
-        <div>
-          <button className="rounded-xl py-6 px-7 bg-white">
+        <div className="flex gap-4">
+          <button className="rounded-xl py-6 px-6 bg-white">
             <div className="relative  w-12 h-12">
               <Image src="/images/positive_review.png" alt="" fill />
             </div>
-            <h2 className="text-center text-2xl font-semibold text-neutral-900 text-3xl">
+            <h2 className="text-center  font-semibold text-neutral-900 text-3xl">
               1
             </h2>
           </button>
 
-          <button className="rounded-xl py-6 px-7 bg-white mx-8">
+          <button className="rounded-xl py-6 px-6 bg-white">
             <div className="relative w-12 h-12">
               <Image src="/images/neutral_review.png" alt="" fill />
             </div>
-            <h2 className="text-center text-2xl font-semibold text-neutral-900 text-3xl">
+            <h2 className="text-center  font-semibold text-neutral-900 text-3xl">
               0
             </h2>
           </button>
 
-          <button className="rounded-xl py-6 px-7 bg-white relative">
+          <button className="rounded-xl py-6 px-6 bg-white relative">
             <div className="relative w-12 h-12">
               <Image src="/images/negative_review.png" alt="" fill />
             </div>
-            <h2 className="text-center text-2xl font-semibold text-neutral-900 text-3xl">
+            <h2 className="text-center  font-semibold text-neutral-900 text-3xl">
               0
             </h2>
           </button>
@@ -113,16 +168,16 @@ const SpecialistId = ({ params }) => {
             90 KUN ICHIDA <br /> SHIKOYATLAR (0)
           </h2>
         </div>
-        <div className="flex gap-5 mt-3">
-          <div className="border-2 rounded-md  border-green-600 pr-10 px-2">
+        <div className="md:flex gap-5 mt-3">
+          <div className="border-2 rounded-md border-green-600 pr-10 px-2">
             <h3 className="text-lg font-semibold text-green-500">
               ISHNING PAST SIFATI - 0
             </h3>
           </div>
-          <div className="border-2 rounded-md  border-green-600 pr-10 px-2">
+          <div className="border-2 rounded-md md:mt-0 mt-4 border-green-600 pr-10 px-2">
             <h3 className="text-lg font-semibold text-green-500">KECH - 0</h3>
           </div>
-          <div className="border-2 rounded-md  border-green-600 pr-10 px-2">
+          <div className="border-2 rounded-md md:mt-0 mt-4 border-green-600 pr-10 px-2">
             <h3 className="text-lg font-semibold text-green-500">
               NOPOK KO&apos;RINDI - 0
             </h3>

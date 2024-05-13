@@ -47,7 +47,7 @@ export default function Home() {
             </Link>
             <Link
               href="/spec"
-              className="py-2 px-4 text-gray-500 border-gray-500 border-2 rounded-xl"
+              className="py-2 px-4 text-gray-500 border-[#2993FF] border-2 rounded-xl"
             >
               Ish topish
             </Link>
